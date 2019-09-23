@@ -1,0 +1,13 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'build'
+  - '-t'
+  - 'gcr.io/hrznfactory/java-cloudbuild'
+  - '.'
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'push'
+  - 'gcr.io/hrznfactory/java-cloudbuild'
+images:
+- 'gcr.io/hrznfactory/java-cloudbuild'
